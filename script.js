@@ -5,10 +5,10 @@ fpsLimit: 60,
 particles: {
 
 number: {
-value: 120,
+value: 90,
 density: {
 enable: true,
-area: 900
+area: 1000
 }
 },
 
@@ -18,21 +18,23 @@ value: "#3aa3ff"
 
 links: {
 enable: true,
-distance: 190,
+distance: 180,
 color: "#3aa3ff",
-opacity: 0.35,
+opacity: 0.4,
 width: 1
 },
 
 move: {
 enable: true,
-speed: 0.6,
+speed: 0.35,
 direction: "none",
-random: true,
+random: false,
 straight: false,
+
 outModes: {
-default: "out"
+default: "bounce"   // não cria novas partículas
 }
+
 },
 
 size: {
@@ -40,7 +42,7 @@ value: 2
 },
 
 opacity: {
-value: 0.5
+value: 0.6
 }
 
 },
@@ -57,10 +59,8 @@ mode: "repulse"
 modes: {
 
 repulse: {
-distance: 140,
-duration: 1.2,
-factor: 100,
-speed: 0.5
+distance: 120,
+duration: 1
 }
 
 }
