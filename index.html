@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Neural Background</title>
+<title>X Point Login</title>
 
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
@@ -15,13 +16,13 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
 height:100vh;
 overflow:hidden;
-background:#eef6ff;
+background:linear-gradient(120deg,#eef6ff,#ffffff);
 }
 
 /* fundo */
@@ -35,25 +36,132 @@ height:100%;
 z-index:-1;
 }
 
-/* exemplo de conteúdo */
+/* login */
 
-.login{
+.login-container{
 
 position:absolute;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
 
-background:rgba(255,255,255,0.35);
-backdrop-filter:blur(10px);
-
+width:360px;
 padding:40px;
+
 border-radius:20px;
 
-box-shadow:0 10px 40px rgba(0,0,0,0.15);
+background:rgba(255,255,255,0.35);
+backdrop-filter:blur(12px);
 
-width:320px;
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
+
 text-align:center;
+
+}
+
+/* titulo */
+
+.login-container h1{
+
+font-size:32px;
+margin-bottom:30px;
+color:#2f8cff;
+
+}
+
+/* inputs */
+
+.input-group{
+margin-bottom:18px;
+}
+
+.input-group input{
+
+width:100%;
+padding:12px;
+
+border-radius:10px;
+border:1px solid rgba(0,0,0,0.1);
+
+background:rgba(255,255,255,0.7);
+
+outline:none;
+font-size:14px;
+
+transition:0.3s;
+
+}
+
+.input-group input:focus{
+
+border:1px solid #3aa3ff;
+box-shadow:0 0 6px rgba(58,163,255,0.3);
+
+}
+
+/* links */
+
+.login-links{
+
+display:flex;
+justify-content:space-between;
+
+font-size:13px;
+
+margin-bottom:20px;
+
+}
+
+.login-links a{
+
+text-decoration:none;
+color:#3aa3ff;
+
+}
+
+/* botão */
+
+.login-btn{
+
+width:100%;
+padding:12px;
+
+border:none;
+border-radius:10px;
+
+background:linear-gradient(90deg,#3aa3ff,#2f8cff);
+
+color:white;
+font-size:16px;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.login-btn:hover{
+
+transform:translateY(-2px);
+box-shadow:0 6px 18px rgba(0,0,0,0.2);
+
+}
+
+/* texto inferior */
+
+.footer-text{
+
+margin-top:25px;
+font-size:16px;
+color:#2f8cff;
+
+}
+
+@media(max-width:480px){
+
+.login-container{
+width:90%;
+}
 
 }
 
@@ -65,8 +173,27 @@ text-align:center;
 
 <div id="tsparticles"></div>
 
-<div class="login">
-<h2>Login</h2>
+<div class="login-container">
+
+<h1>X Point</h1>
+
+<div class="input-group">
+<input type="text" placeholder="CPF">
+</div>
+
+<div class="input-group">
+<input type="password" placeholder="Senha">
+</div>
+
+<div class="login-links">
+<a href="#">Esqueceu a senha?</a>
+<a href="#">Reconhecimento facial</a>
+</div>
+
+<button class="login-btn">Login</button>
+
+<p class="footer-text">A jornada pode ser mais leve.</p>
+
 </div>
 
 <script>
@@ -78,10 +205,10 @@ fpsLimit: 60,
 particles: {
 
 number: {
-value: 80,
+value: 150,
 density: {
 enable: true,
-area: 900
+area: 800
 }
 },
 
@@ -91,19 +218,18 @@ value: "#3aa3ff"
 
 links: {
 enable: true,
-distance: 180,
+distance: 200,
 color: "#3aa3ff",
-opacity: 0.4,
+opacity: 0.35,
 width: 1
 },
 
 move: {
 enable: true,
-speed: 0.5,
+speed: 0.45,
 direction: "none",
 random: true,
 straight: false,
-
 outModes: {
 default: "bounce"
 }
@@ -132,7 +258,7 @@ modes: {
 
 repulse: {
 distance: 130,
-duration: 1.5
+duration: 1.4
 }
 
 }
@@ -146,4 +272,5 @@ detectRetina: true
 </script>
 
 </body>
+
 </html>
