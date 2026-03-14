@@ -20,10 +20,7 @@ width: 1
 
 move: {
 enable: true,
-speed: 0.4,
-outModes: {
-default: "bounce"
-}
+speed: 0.2   // mais lento
 },
 
 size: {
@@ -49,7 +46,7 @@ modes: {
 
 repulse: {
 distance: 120,
-duration: 1
+duration: 2   // repulsão mais lenta
 }
 
 }
