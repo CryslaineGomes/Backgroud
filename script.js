@@ -3,7 +3,7 @@ tsParticles.load("tsparticles", {
 particles: {
 
 number: {
-value: 80
+value: 160
 },
 
 color: {
@@ -12,19 +12,26 @@ value: "#3aa3ff"
 
 links: {
 enable: true,
-distance: 150,
+distance: 200,
 color: "#3aa3ff",
-opacity: 0.4,
+opacity: 0.35,
 width: 1
 },
 
 move: {
 enable: true,
-speed: 1
+speed: 0.4,
+outModes: {
+default: "bounce"
+}
 },
 
 size: {
-value: 3
+value: 2
+},
+
+opacity: {
+value: 0.6
 }
 
 },
@@ -32,22 +39,23 @@ value: 3
 interactivity: {
 
 events: {
-
 onHover: {
 enable: true,
 mode: "repulse"
 }
-
 },
 
 modes: {
 
 repulse: {
-distance: 120
+distance: 120,
+duration: 1
 }
 
 }
 
-}
+},
+
+detectRetina: true
 
 });
