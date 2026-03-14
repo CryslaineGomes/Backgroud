@@ -1,39 +1,53 @@
-particlesJS("particles-js", {
-  "particles": {
-    "number": {
-      "value": 80
-    },
-    "color": {
-      "value": "#00aaff"
-    },
-    "shape": {
-      "type": "circle"
-    },
-    "opacity": {
-      "value": 0.5
-    },
-    "size": {
-      "value": 3
-    },
-    "line_linked": {
-      "enable": true,
-      "distance": 150,
-      "color": "#00aaff",
-      "opacity": 0.4,
-      "width": 1
-    },
-    "move": {
-      "enable": true,
-      "speed": 2
-    }
-  },
+tsParticles.load("tsparticles", {
 
-  "interactivity": {
-    "events": {
-      "onhover": {
-        "enable": true,
-        "mode": "grab"
-      }
-    }
-  }
+particles: {
+
+number: {
+value: 80
+},
+
+color: {
+value: "#3aa3ff"
+},
+
+links: {
+enable: true,
+distance: 150,
+color: "#3aa3ff",
+opacity: 0.4,
+width: 1
+},
+
+move: {
+enable: true,
+speed: 1
+},
+
+size: {
+value: 3
+}
+
+},
+
+interactivity: {
+
+events: {
+
+onHover: {
+enable: true,
+mode: "repulse"
+}
+
+},
+
+modes: {
+
+repulse: {
+distance: 120
+}
+
+}
+
+}
+
 });
